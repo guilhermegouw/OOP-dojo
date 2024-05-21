@@ -21,3 +21,15 @@ attached) to instances of that class.
 2. Instance attributes could be set before or after the instance object is returned.
 3. That's said, it's a best practice to set them in __init__, a special method which
 exists specifically for this purpose.
+
+###Alternatively: getattr() and setattr()
+1. In addition to the traditional dot access syntax, attributes could also be 
+read and set using getattr() and setattr() built-in functions.
+2. These methods are most useful if we're manipulating objects programmatically
+and especially if we're doing so at scale.
+
+###Revisiting self
+1. self is the first argument passed to instance methods.
+2. It presents the instance object to the method.
+3. It is called self by convention only, and self is neither a reserved keyword
+nor does it have any special meaning in python.

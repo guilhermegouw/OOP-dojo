@@ -8,4 +8,3 @@ class MercedezBenz:
 
     def drive(self):
         return 'I am driving'
-
