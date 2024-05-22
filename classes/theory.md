@@ -33,3 +33,24 @@ and especially if we're doing so at scale.
 2. It presents the instance object to the method.
 3. It is called self by convention only, and self is neither a reserved keyword
 nor does it have any special meaning in python.
+
+###Class and Static Methods.
+1. In addition to instance methods, python has static and class methods.
+2. In class methods, the class is implicitly passed as the first argument,
+whereas in static methods, neither the instance object not the class is passed.
+3. Static methods are like regular functions that are grouped with the class 
+namespace because they're somehow conceptually related to the class.
+
+###Dunder dict
+1. All instance attributes are stored in an instance-specific mapping object.
+2. For instances, that mapping object is a plain python dictionary.
+3. It is accessed using instance.__dict__ syntax.
+
+###Class vs Instance__dict__
+1. Just like instances, classes have their own attribute namespace.
+2. Just as for instances, it too is accessed using __dict__.
+3. Unlike instances, however, the class __  is a mappingproxy, which is a 
+more restricted type of read-only dictionary where all the keys are strings.
+4. The class __dict__ contains all the instance, class, and static methods we 
+define, in addition to class variables.
+5. It also contains some descriptors and other class dunders.
